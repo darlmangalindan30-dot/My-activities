@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Multimedia Showcase</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            /* Graduation theme: Deep Navy + Gold gradient */
+            background: linear-gradient(135deg, #0A2463 0%, #1E3A8A 50%, #0A2463 100%);
+            padding: 2rem 1rem;
+            line-height: 1.7;
+            position: relative;
+        }
+
+        /* Subtle graduation cap pattern overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(rgba(212,175,55,0.05) 20%, transparent 20%);
+            background-size: 30px 30px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Main Heading */
+        h1 {
+            text-align: center;
+            color: #FFD700; /* Gold */
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Main Container */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            justify-content: center;
+            align-items: flex-start;
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Column Layout */
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            flex: 1 1 300px;
+            max-width: 320px;
+        }
+
+        /* Card Design - Graduation Style */
+        .card {
+            background: #FFFFFF;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            border: 3px solid #D4AF37; /* Gold border */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #0A2463, #FFD700, #0A2463);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(255,215,0,0.25);
+        }
+
+        .card h2 {
+            color: #0A2463; /* Deep Navy */
+            font-size: 1.6rem;
+            margin: 0.5rem 0 1rem;
+            font-weight: 700;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 0.3rem;
+            display: inline-block;
+        }
+
+        .card p {
+            color: #333333;
+            font-size: 0.95rem;
+            margin-bottom: 0.8rem;
+        }
+
+        /* Media Area */
+        .media-area {
+            margin: 1.2rem 0;
+            padding: 1.2rem;
+            background: #F8F4E9; /* Soft cream */
+            border: 2px dashed #D4AF37;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Image Styling */
+        .media-area img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(10,36,99,0.2);
+            transition: transform 0.3s ease;
+            border: 2px solid #0A2463;
+        }
+
+        .media-area img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Audio & Video Styling */
+        audio, video {
+            width: 100%;
+            border-radius: 6px;
+            border: 2px solid #D4AF37;
+        }
+
+        video {
+            box-shadow: 0 4px 12px rgba(10,36,99,0.2);
+        }
+
+        /* Lyrics Section - Fixed spacing! */
+        .lyrics {
+            margin-top: 1.5rem;
+            padding: 1.2rem;
+            border-top: 2px solid #D4AF37;
+            color: #2C3E50;
+            background: #F8F4E9;
+            border-radius: 8px;
+            line-height: 1.8; /* Proper spacing between lines */
+            white-space: pre-line; /* Keeps line breaks clean */
+        }
+
+        .lyrics p:first-child {
+            font-weight: 700;
+            color: #0A2463;
+            margin-bottom: 1rem;
+            font-style: normal;
+            font-size: 1.1rem;
+            border-bottom: 1px solid #D4AF37;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Arrow - Gold style */
+        .arrow {
+            align-self: center;
+            font-size: 3rem;
+            color: #FFD700;
+            text-shadow: 2px 2px 6px
